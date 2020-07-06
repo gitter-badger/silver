@@ -42,9 +42,15 @@ set SILVER_LEFT status:black:white dir:blue:black git:green:black cmdtime:magent
 set -x SILVER_SHELL fish
 ```
 
+In case of Ion add this to your `~/.config/ion/initrc`:
+```sh
+let SILVER_LEFT = [ status:black:white dir:blue:black git:green:black cmdtime:magenta:black ]
+export SILVER_SHELL = ion
+```
+
 Now that silver is configured, you need to evaluate its bootstrap code.
 
-`~/.bashrc`/`~/.zshrc`:
+`~/.bashrc`/`~/.zshrc`/`~/.config/ion/initrc`:
 ```sh
 eval "$(silver init)"
 ```
